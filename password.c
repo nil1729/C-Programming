@@ -1,0 +1,133 @@
+int main()
+{
+    int n,l,count1=0,count2=0,count3=0,count4=0,count=0,x;
+    char s[100];
+    scanf("%d",&n);
+    scanf("%s",s);
+    l=strlen(s);
+    for(int i='0';i<='9';i++)
+    {
+        for(int j=0;j<l;j++)
+        {
+            if(s[j]==i)
+            {
+                count1++;
+                break;
+            }
+        }
+    }
+    for(int i='a';i<='z';i++)
+    {
+        for(int j=0;j<l;j++)
+        {
+            if(s[j]==i)
+            {
+                count2++;
+                break;
+            }
+        }
+    }
+    for(int i='A';i<='Z';i++)
+    {
+        for(int j=0;j<l;j++)
+        {
+            if(s[j]==i)
+            {
+                count3++;
+                break;
+            }
+        }
+    }
+    for(int j=0;j<l;j++)
+    {
+        if(s[j]=='!')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='@')
+        {
+            count4++;
+            break;
+        }
+         if(s[j]=='#')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='$')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='%')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='^')
+        {
+            count4++;
+            break;
+        }
+         if(s[j]=='&')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='*')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='(')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]==')')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='-')
+        {
+            count4++;
+            break;
+        }
+        if(s[j]=='+')
+        {
+            count4++;
+            break;
+        }
+    }
+    if(l<6)
+    {
+        x=6-l;
+        if(count1==0)
+            count++;
+        if(count2==0)
+            count++;
+        if(count3==0)
+            count++;
+        if(count4==0)
+            count++;
+        if(x>count)
+            printf("%d",x);
+        else
+            printf("%d",count);
+    }
+    else
+    {
+        if(count1==0)
+            count++;
+        if(count2==0)
+            count++;
+        if(count3==0)
+            count++;
+        if(count4==0)
+            count++;
+        printf("%d",count);
+    }
+    return 0;
+}
